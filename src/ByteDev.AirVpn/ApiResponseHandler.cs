@@ -1,6 +1,7 @@
 ﻿using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
+using ByteDev.AirVpn.Json;
 
 namespace ByteDev.AirVpn
 {
@@ -15,7 +16,10 @@ namespace ByteDev.AirVpn
                 throw new AirVpnClientException($"AirVPN API request was not successful. Response status code: '{response.StatusCode}'. Response content: '{json}'.");
             }
 
-            return JsonSerializer.Deserialize<T>(json);
+            var options = new JsonSerializerOptions();
+            options.Converters.Add(new UnixEpochTimeToDateTimeJsonConverter());
+
+            return JsonSerializer.Deserialize<T>(json, options);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System;
+using System.Text.Json.Serialization;
 
 namespace ByteDev.AirVpn.Contract.Response
 {
@@ -7,8 +8,6 @@ namespace ByteDev.AirVpn.Contract.Response
     /// </summary>
     public class GetUserSessionResponse
     {
-        // TODO: remove unix time and replace with DateTime
-
         [JsonPropertyName("device_name")]
         public string DeviceName { get; set; }
 
@@ -81,14 +80,8 @@ namespace ByteDev.AirVpn.Contract.Response
         /// <summary>
         /// Date time the current connnection started.
         /// </summary>
-        [JsonPropertyName("connected_since_date")]
-        public string ConnectedSinceDateTime { get; set; }
-
-        /// <summary>
-        /// Unix date time the current connnection started.
-        /// </summary>
         [JsonPropertyName("connected_since_unix")]
-        public string ConnectedSinceDateTimeUnix { get; set; }
+        public DateTime ConnectedSinceDateTime { get; set; }
 
         /// <summary>
         /// Read bytes per second.

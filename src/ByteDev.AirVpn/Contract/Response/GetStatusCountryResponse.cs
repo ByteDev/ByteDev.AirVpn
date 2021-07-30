@@ -4,9 +4,15 @@ namespace ByteDev.AirVpn.Contract.Response
 {
     public class GetStatusCountryResponse : BaseStatusEntryResponse
     {
+        /// <summary>
+        /// Country name.
+        /// </summary>
         [JsonPropertyName("country_name")]
         public string CountryName { get; set; }
 
+        /// <summary>
+        /// Country code.
+        /// </summary>
         [JsonPropertyName("country_code")]
         public string CountryCode { get; set; }
 
@@ -22,6 +28,9 @@ namespace ByteDev.AirVpn.Contract.Response
         [JsonPropertyName("users")]
         public int Users { get; set; }
 
+        /// <summary>
+        /// Number of servers.
+        /// </summary>
         [JsonPropertyName("servers")]
         public int Servers { get; set; }
     }

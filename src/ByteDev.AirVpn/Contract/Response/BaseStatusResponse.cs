@@ -14,7 +14,7 @@ namespace ByteDev.AirVpn.Contract.Response
         /// Health status.
         /// </summary>
         [JsonPropertyName("health")]
-        public string HealthStatus { get; set; }
+        public HealthStatusType HealthStatus { get; set; }
 
         /// <summary>
         /// Health warning message. Only set if health is at warning.
@@ -33,27 +33,5 @@ namespace ByteDev.AirVpn.Contract.Response
         /// </summary>
         [JsonPropertyName("bw_max")]
         public int BandwidthAvailable { get; set; }
-
-        /// <summary>
-        /// Health status as a enumeration.
-        /// </summary>
-        [JsonIgnore]
-        public HealthStatusType HealthStatusType
-        {
-            get
-            {
-                switch (HealthStatus)
-                {
-                    case "ok":
-                        return HealthStatusType.Ok;
-                    case "warning":
-                        return HealthStatusType.Warning;
-                    case "error":
-                        return HealthStatusType.Error;
-                    default:
-                        return HealthStatusType.Unknown;
-                }
-            }
-        }
     }
 }

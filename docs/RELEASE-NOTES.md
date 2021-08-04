@@ -4,6 +4,8 @@
 
 Breaking changes:
 - All Unix time based properties on the contract now use a custom DateTime JSON converter on deserialization.
+- Removed `GetStatusResponse.HealthStatusType` property.
+- Changed `GetStatusResponse.HealthStatus` property from `string` to `HealthStatusType` enum.
 
 New features:
 - (None)

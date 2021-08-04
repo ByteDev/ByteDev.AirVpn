@@ -21,28 +21,28 @@ namespace ByteDev.AirVpn.Contract.Response
         public string VpnIp { get; set; }
 
         [JsonPropertyName("vpn_ipv4")]
-        public string VpnIpV4 {get; set; }
+        public string VpnIpV4 { get; set; }
 
         [JsonPropertyName("vpn_ipv6")]
-        public string VpnIpV6 {get; set; }
+        public string VpnIpV6 { get; set; }
 
         [JsonPropertyName("exit_ip")]
-        public string ExitIp {get; set; }
+        public string ExitIp { get; set; }
 
         [JsonPropertyName("exit_ipv4")]
-        public string ExitIpV4 {get; set; }
+        public string ExitIpV4 { get; set; }
 
         [JsonPropertyName("exit_ipv6")]
-        public string ExitIpV6 {get; set; }
+        public string ExitIpV6 { get; set; }
 
         [JsonPropertyName("entry_ip")]
-        public string EntryIp {get; set; }
+        public string EntryIp { get; set; }
 
         [JsonPropertyName("entry_ipv4")]
-        public string EntryIpV4 {get; set; }
+        public string EntryIpV4 { get; set; }
 
         [JsonPropertyName("entry_ipv6")]
-        public string EntryIpV6 {get; set; }
+        public string EntryIpV6 { get; set; }
         
         [JsonPropertyName("server_name")]
         public string ServerName { get; set; }

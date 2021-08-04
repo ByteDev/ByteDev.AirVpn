@@ -1,6 +1,7 @@
 ﻿using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
+using ByteDev.AirVpn.Contract.Response;
 using ByteDev.Json.SystemTextJson.Serialization;
 
 namespace ByteDev.AirVpn
@@ -20,6 +21,10 @@ namespace ByteDev.AirVpn
             options.Converters.Add(new UnixEpochTimeToDateTimeJsonConverter
             {
                 Precision = UnixEpochTimePrecision.Seconds
+            });
+            options.Converters.Add(new EnumJsonConverter<HealthStatusType>(HealthStatusType.Unknown)
+            {
+                WriteEnumValueType = EnumValueType.Name
             });
 
             return JsonSerializer.Deserialize<T>(json, options);

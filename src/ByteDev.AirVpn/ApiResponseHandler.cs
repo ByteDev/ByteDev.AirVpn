@@ -1,7 +1,7 @@
 ﻿using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
-using ByteDev.AirVpn.Json;
+using ByteDev.Json.SystemTextJson.Serialization;
 
 namespace ByteDev.AirVpn
 {
@@ -17,7 +17,10 @@ namespace ByteDev.AirVpn
             }
 
             var options = new JsonSerializerOptions();
-            options.Converters.Add(new UnixEpochTimeToDateTimeJsonConverter());
+            options.Converters.Add(new UnixEpochTimeToDateTimeJsonConverter
+            {
+                Precision = UnixEpochTimePrecision.Seconds
+            });
 
             return JsonSerializer.Deserialize<T>(json, options);
         }

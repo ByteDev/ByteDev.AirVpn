@@ -15,6 +15,7 @@
     <license type="file">LICENSE</license>
     <dependencies>
       <group targetFramework=".NETStandard2.0">
+        <dependency id="ByteDev.Json.SystemTextJson" version="1.0.0" />
         <dependency id="ByteDev.ResourceIdentifier" version="2.2.0" />
         <dependency id="System.Text.Json" version="5.0.2" />
       </group>

@@ -9,7 +9,7 @@ New features:
 - (None)
 
 Bug fixes / internal changes:
-- (None)
+- Added package dependency `ByteDev.Json.SystemTextJson`.
 
 ## 1.0.0 - 29 July 2021
 

@@ -86,6 +86,24 @@ namespace ByteDev.AirVpn.UnitTests
                 Assert.That(result.Continents.Single().HealthStatus, Is.EqualTo(HealthStatusType.Warning));
                 Assert.That(result.Countries.Single().HealthStatus, Is.EqualTo(HealthStatusType.Error));
             }
+
+            [Test]
+            public async Task WhenJsonContainsInvalidEnum_ThenDeserializeToUnknown()
+            {
+                const string json = @"{
+                    ""planets"": [
+                        {
+                            ""health"": ""not valid""
+                        }
+                    ]
+                }";
+
+                var sut = CreateSut(json);
+
+                var result = await sut.GetStatusAsync();
+
+                Assert.That(result.Planets.Single().HealthStatus, Is.EqualTo(HealthStatusType.Unknown));
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 # Release Notes
 
-## 2.0.0 - ?
+## 2.0.0 - 05 August 2021
 
 Breaking changes:
 - All Unix time based properties on the contract now use a custom DateTime JSON converter on deserialization.

@@ -12,7 +12,7 @@ namespace ByteDev.AirVpn
         /// <summary>
         /// Initializes a new instance of the <see cref="T:ByteDev.AirVpn.AirVpnClientException" /> class.
         /// </summary>
-        public AirVpnClientException() : base("Error occured within the AirVPN client.")
+        public AirVpnClientException() : base("Error occurred within the AirVPN client.")
         {
         }
 

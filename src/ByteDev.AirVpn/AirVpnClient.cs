@@ -48,7 +48,7 @@ namespace ByteDev.AirVpn
             }
             catch (Exception ex)
             {
-                throw new AirVpnClientException("Error occured while retrieving user info.", ex);
+                throw new AirVpnClientException("Error occurred while retrieving user info.", ex);
             }
         }
 
@@ -75,7 +75,7 @@ namespace ByteDev.AirVpn
             }
             catch (Exception ex)
             {
-                throw new AirVpnClientException("Error occured while sending notification.", ex);
+                throw new AirVpnClientException("Error occurred while sending notification.", ex);
             }
         }
 
@@ -103,7 +103,7 @@ namespace ByteDev.AirVpn
             }
             catch (Exception ex)
             {
-                throw new AirVpnClientException("Error occured while attempting to disconnect from the VPN.", ex);
+                throw new AirVpnClientException("Error occurred while attempting to disconnect from the VPN.", ex);
             }
         }
 
@@ -125,7 +125,7 @@ namespace ByteDev.AirVpn
             }
             catch (Exception ex)
             {
-                throw new AirVpnClientException("Error occured while retrieving status info.", ex);
+                throw new AirVpnClientException("Error occurred while retrieving status info.", ex);
             }
         }
     }

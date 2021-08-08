@@ -15,7 +15,7 @@ namespace ByteDev.AirVpn.UnitTests
         {
             var sut = new AirVpnClientException();
 
-            Assert.That(sut.Message, Is.EqualTo("Error occured within the AirVPN client."));
+            Assert.That(sut.Message, Is.EqualTo("Error occurred within the AirVPN client."));
         }
 
         [Test]
